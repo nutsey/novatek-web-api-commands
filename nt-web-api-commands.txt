@@ -1,57 +1,58 @@
-*	1001	nul	take photo	returns filename and freepicnum or errcode		
-*	1002	enum	set photo size		freepicnum changes if changed	
-*	1003	nul	get freepicnum			
-*	2001	start/stop	1/0		check maxrecordtime before start	
-*	2002	enum	set video size		maxrecordtime changes if changed	
-*	2003	on/off	set looprec			
-*	2004	on/off	set hdr (wdr?)			
-*	2005	enum	set EV, 6=0			
-*	2006	on/off	set mot.detect			
-*	2007	on/off	set record audio			
-*	2008	on/off	set date stamp			
-*	2009	nul		shows max rec time with current bitrate		
-	2010	enum	liveview size			
-*	2011	on/off	g-sensor sens. 0=off 3=max			
-*	2012	on/off	autorec			
-*	2013	bitrate string	vid bitrate kb/s			
-*	2014	bitrate string	liveview bitrate			
-*	2015	start/stop	1/0 liveview			
-*	2016	nul	shows current mov rec time	in sec		
-*	2017		take video snapshot		-13	exec fail
-*	2018		save snapshot file		-1	no file
-*	3001	enum	0/1/2 phot/vid/play			
-*	3002	nul	lists commands			
-*	3003	ssid string	set ssid			
-*	3004	psw string	set psw			
-*	3005	yy-mm-dd str				
-*	3006	hh-mm-ss str				
-*	3007	enum	poweroff time			
-*	3008	enum	lang			
-*	3009	enum	tv format			
-*	3010	enum	format SD			
-*	3011	nul	defaults			
-*	3012	nul	show ver			
-*	3013	nul	FW update			
-*	3014	nul	cmd status show			
-*	3015	nul	file list			
-*	3016	nul	ping cam			
-*	3017	nul	get free space			
-*	3018	nul	reconnect wifi			
-*	3019	nul	get battery level 	0=full 1=med 2=low 3=empty 4=exhstd 5=chargeon		
-	3020	nul	socket port 3333	error status		
-*	3021	nul	save settings to flash			
-	3022		get hw capacity		st=0 val=3	
-	3023		remove last user		st=0	
-	3024		get sd status	0=rem 1=ins 2=locked	st=0 val=1	
-	3025				http://115.29.201.46:8020/download/filedesc.xml	
-	3026				http://192.168.1.254/FW96660A.bin	
-	3029		shows SSID/psw		<SSID>GITUP</SSID> 	<PASSPHRASE>12345678</PASSPHRASE>
-	3030	nul	returns video mode list			
-	3031		&str	shows some cmds		
-	3032		set network for STA mode	SSID:psw		
-	3033		turn on STA mode	restart wifi with 3018	st=0	
-	4001	file path string	get thumbnail	path+request	path in capitals!!!	
-	4002	file path string	get preview	path+request	path in capitals!!!	
-	4003	file path string	delete 1 file	req+path		
-	4004	file path string	del all			
-	5001		returns 32k data	NOR SPI flash?		
+NT966XY commands by nutsey:
+1001	nul	take photo	returns filename and freepicnum or errcode		
+1002	enum	set photo size		freepicnum changes if changed	
+1003	nul	get freepicnum			
+2001	start/stop	1/0		check maxrecordtime before start	
+2002	enum	set video size		maxrecordtime changes if changed	
+2003	on/off	set looprec			
+2004	on/off	set hdr (wdr?)			
+2005	enum	set EV, 6=0			
+2006	on/off	set mot.detect			
+2007	on/off	set record audio			
+2008	on/off	set date stamp			
+2009	nul		shows max rec time with current bitrate		
+2010	enum	liveview size			
+2011	on/off	g-sensor sens. 0=off 3=max			
+2012	on/off	autorec			
+2013	bitrate string	vid bitrate kb/s			
+2014	bitrate string	liveview bitrate			
+2015	start/stop	1/0 liveview			
+2016	nul	shows current mov rec time	in sec		
+2017		take video snapshot		-13	exec fail
+2018		save snapshot file		-1	no file
+3001	enum	0/1/2 phot/vid/play			
+3002	nul	lists commands			
+3003	ssid string	set ssid			
+3004	psw string	set psw			
+3005	yy-mm-dd str				
+3006	hh-mm-ss str				
+3007	enum	poweroff time			
+3008	enum	lang			
+3009	enum	tv format			
+3010	enum	format SD			
+3011	nul	defaults			
+3012	nul	show ver			
+3013	nul	FW update			
+3014	nul	cmd status show			
+3015	nul	file list			
+3016	nul	ping cam			
+3017	nul	get free space			
+3018	nul	reconnect wifi			
+3019	nul	get battery level 	0=full 1=med 2=low 3=empty 4=exhstd 5=chargeon		
+3020	nul	socket port 3333	error status		
+3021	nul	save settings to flash			
+3022		get hw capacity		st=0 val=3	
+3023		remove last user		st=0	
+3024		get sd status	0=rem 1=ins 2=locked	st=0 val=1	
+3025				http://115.29.201.46:8020/download/filedesc.xml	
+3026				http://192.168.1.254/FW96660A.bin	
+3029		shows SSID/psw		<SSID>GITUP</SSID> 	<PASSPHRASE>12345678</PASSPHRASE>
+3030	nul	returns video mode list			
+3031		&str	shows some cmds		
+3032		set network for STA mode	SSID:psw		
+3033		turn on STA mode	restart wifi with 3018	st=0	
+4001	file path string	get thumbnail	path+request	path in capitals!!!	
+4002	file path string	get preview	path+request	path in capitals!!!	
+4003	file path string	delete 1 file	req+path		
+4004	file path string	del all			
+5001		returns 32k data	NOR SPI flash?		
