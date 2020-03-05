@@ -20,6 +20,14 @@ NT966XY commands by nutsey:
 2016	nul	shows current mov rec time	in sec		
 2017		take video snapshot		-13	exec fail
 2018		save snapshot file		-1	no file
+2019 get liveview format
+2020 video contrast control
+2021 two way audio control
+2022 two way audio sample rate control
+2023 flip mirror
+2024 quality control
+2025 bitrate control
+2026 rtsp stream audio control
 3001	enum	0/1/2 phot/vid/play			
 3002	nul	lists commands			
 3003	ssid string	set ssid			
@@ -50,9 +58,16 @@ NT966XY commands by nutsey:
 3030	nul	returns video mode list			
 3031		&str	shows some cmds		
 3032		set network for STA mode	SSID:psw		
-3033		turn on STA mode	restart wifi with 3018	st=0	
+3033		turn on STA mode	restart wifi with 3018	st=0
+3035 app connected
+3036 app disconnected
+3037 get current mode status
+3038 wi-fi AP search
 4001	file path string	get thumbnail	path+request	path in capitals!!!	
 4002	file path string	get preview	path+request	path in capitals!!!	
 4003	file path string	delete 1 file	req+path		
 4004	file path string	del all			
-5001		returns 32k data	NOR SPI flash?		
+4005 get movie file info
+5001 upload
+5002 upload audio
+8001 user defined command
